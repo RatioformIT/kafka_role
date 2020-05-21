@@ -7,6 +7,7 @@
     --list
   register: kafka_topics_listed
   changed_when: false
+  check_mode: no
 
 - name: KAFKA | Topics in server
   set_fact:
@@ -30,6 +31,7 @@
     - "{{ kafka_topics_to_check }}"
   register: kafka_topics_described_full
   changed_when: false
+  check_mode: no
 
 - name: KAFKA | Topics to alter
   set_fact:

@@ -37,12 +37,14 @@
   register: kafka_check
   changed_when: false
   ignore_errors: true
+  check_mode: false
 
 - name: KAFKA | Check kafka version
   command: bash -c "ls {{ kafka_install_path }}/libs | grep 'kafka_{{ kafka_scala_version }}-{{ kafka_version }}.jar'"
   register: kafka_version_check
   changed_when: false
   ignore_errors: true
+  check_mode: false
 
 - name: KAFKA | Stop service
   systemd:
