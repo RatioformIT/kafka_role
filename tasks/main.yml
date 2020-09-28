@@ -5,6 +5,12 @@
   tags:
     - kafka_install
 
+- name: KAFKA | JSON
+  import_tasks: log4j_json.yml
+  tags:
+    - kafka_install
+  when: kafka_log4j_json
+
 - name: KAFKA | Configure
   import_tasks: config.yml
   tags:

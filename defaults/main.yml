@@ -4,6 +4,8 @@
 kafka_version: 2.2.0
 kafka_scala_version: 2.12  # Recommended
 
+kafka_log4j_json: no
+
 ## Service options
 
 # Owner

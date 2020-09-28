@@ -1,0 +1,11 @@
+- name: "add jsonevent layout for log4j 1.2"
+  copy:
+    dest: "/opt/kafka/libs/{{ item }}"
+    src: "{{ item }}"
+    owner: "{{ kafka_user }}"
+    group: "{{ kafka_group }}"
+  loop:
+    - commons-lang-2.6.jar
+    - json-smart-1.1.1.jar
+    - jsonevent-layout-1.7.jar
+
